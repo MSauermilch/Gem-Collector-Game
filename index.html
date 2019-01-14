@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type='text/css' href="assets/css/reset.css">
+    <link rel="stylesheet" type='text/css' href="assets/css/style.css">
+    <script src="C:/Users/Mad Matt/Desktop/essentials/jQueryLS.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Gem collector</title>
+  </head>
+
+
+<body id="body">
+
+  <div class="container">
+    <div class="row my-row">
+        <div  id="titleDiv" class="col my-col">
+            <h1>Gem Collector</h1>
+        </div>
+    </div>
+
+    <div class ="row my-row">
+      <div class="col my-col">
+        <h2>body</h2>
+        <br>
+        <div id="wingem"></div>
+      </div>
+    </div>
+
+    <div class ="row my-row">
+      <div class="col my-col -3">
+        <div id="gem1">gem1</div>
+          </div>
+
+        <div class="col my-col -3">
+          <div id="gem2">gem2</div>
+            </div>
+
+          <div class="col my-col -3">
+            <div id="gem3">gem3</div>
+             </div>
+
+            <div class="col my-col -3">
+              <div id="gem4">gem4</div>
+                </div>
+      </div>
+
+    <div class="row my-row">
+      <div id="wins"class="col-4">wins</div>
+        <div id="playerScore" class="col-4">playerScore</div>
+          <div id="losses" class="col-4">losses</div>
+    </div>
+</div>
+
+    <script> 
+
+    alert("incomplete coding. script needs a formatting reset and de bugging. feel like its pretty close. should be 100% by next class. cheers!")
+
+      var playerScore = 0;
+      var wins = 0;
+      var losses = 0;
+
+      var winNum = Math.floor(Math.random() * 101 + 19)
+        $("#wingem").text(winNum);
+        console.log(winNum) /// redo math
+
+      //random numbers
+      var gem1 = Math.floor(Math.random() * 11+1);
+      var gem2 = Math.floor(Math.random() * 11+1);
+      var gem3 = Math.floor(Math.random() * 11+1);
+      var gem4 = Math.floor(Math.random() * 11+1);
+
+	    // $("#numberOfWins").text(wins);
+      // $("#numberOfLosses").text(losses);
+      
+        $("#gem1").on("click", function() {
+        playerScore=playerScore + gem1;
+		    console.log("New playerScore=" + playerScore);
+	    	$("#totalScore").text(playerScore);
+			    if(playerScore === winNum) {win();}
+			    else if(playerScore > winNum) {lose();}
+        });
+
+        $("#gem2").on("click", function() {
+        playerScore=playerScore + gem2;
+		    console.log("New playerScore=" + playerScore);
+	    	$("#totalScore").text(playerScore);
+			    if(playerScore === winNum) {win();}
+			    else if(playerScore > winNum) {lose();}
+        });
+
+        $("#gem3").on("click", function() {
+        playerScore=playerScore + gem3;
+        console.log("New playerScore=" + playerScore);
+	    	$("#totalScore").text(playerScore);
+			    if(userScore === winNum) {win();}
+			    else if(playerScore > winNum) {lose();}
+        });
+        
+        $("#gem4").on("click", function() {
+        userScore=userScore + gem4;
+		    console.log("New playerScore=" + playerScore);
+	    	$("#totalScore").text(playerScore);
+			    if(userScore === winNum) {win();}
+			    else if(playerScore > winNum) {lose();}
+        });
+        
+        function win(){
+	 	        wins++; 
+	  	    $('#numberOfWins').text(wins);
+	          reset();
+          }
+          
+	      function loserlose(){
+		        losses++;
+		      $('#numberOfLosses').text(losses);
+		        reset();
+        }
+        
+        function reset() {
+
+        }
+	
+    
+    
+
+    </script>
+  </body>
+</html>kz]
+
