@@ -1,8 +1,13 @@
 
-#body {
+.container {
+    margin-top: 15px;
     background-image: url("../images/crystals6.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    height: 700px;
+    border: Solid blue 3px;
+    border-radius: 4px;
+
     }
 
 .container {
