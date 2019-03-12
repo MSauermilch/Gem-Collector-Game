@@ -1,10 +1,12 @@
      //Game numbers
  var wins = 0;
  var lose = 0;
+ var playerScore = 0; //ignit
 
   function reset(){
 
-    var playerScore = 0;
+    playerScore = 0;
+    $("#playerScore").text(playerScore);
     console.log("begining Score: " + playerScore)
 
     var gem = [];
@@ -13,14 +15,15 @@
         $("#wingem").text(winNum);
           console.log("winning number: " + winNum);
 
-      for (i=0; i<4; i++){
-        gem[i] = Math.floor(Math.random() * 11+1);
-        
-        };
-          console.log("Gem: " + gem);
+    for (i=0; i<4; i++){
+      gem[i] = Math.floor(Math.random() * 11+1);
       
-      $("#wins").text(wins);
-      $("#losses").text(lose);
+          console.log("Gem: " + gem[i]);
+      };
+      
+      
+    $("#wins").text(wins);
+    $("#losses").text(lose);
 
     function checkWin(){
       if (playerScore === winNum) {
@@ -39,7 +42,7 @@
       } else { return;}
     };
 
-  $("#gem1").on("click", function() {       // refactory playerscore retaint value and wont reset.
+    $(".gem1").on("click", function() {       // refactory playerscore retaint value and wont reset.
       playerScore = playerScore + gem[0];
     $("#playerScore").text(playerScore);
       checkWin();
@@ -47,7 +50,7 @@
           console.log(playerScore)
     });
 
-  $("#gem2").on("click", function() {
+  $(".gem2").on("click", function() {
       playerScore=playerScore + gem[1];
     $("#playerScore").text(playerScore);
       checkWin();
@@ -55,7 +58,7 @@
           console.log(playerScore)
     });
 
-  $("#gem3").on("click", function() {
+  $(".gem3").on("click", function() {
       playerScore=playerScore + gem[2];
     $("#playerScore").text(playerScore);
       checkWin();
@@ -63,7 +66,7 @@
           console.log(playerScore)
     });
     
-  $("#gem4").on("click", function() {
+  $(".gem4").on("click", function() {
       playerScore=playerScore + gem[3];
     $("#playerScore").text(playerScore);
       checkWin();

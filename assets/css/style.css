@@ -50,7 +50,7 @@
     border: solid blue 3px;
     }
 
-#gem1, #gem2, #gem3, #gem4 {
+.gem1, .gem2, .gem3, .gem4 {
     border-radius: 8px;
     border: solid blue 3px;
     height: 145px;
